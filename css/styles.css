@@ -25,24 +25,32 @@ body {
     color: var(--lightGray);
     font-family: 'Karla', sans-serif;
 }
+
+/* GLOBALES*/
 h1 {
     font-size: 25px;
     color: var(--cyan);
+    margin-bottom: 20px;
 }
+
 h2 {
     font-size: 18px;
     color: var(--brightYellow);
 }
+
 h4 {
     margin-top: 10px;
 }
+
 p {
     color: var(--grayishBlue);
     font-size: 16px;
 }
+
 span {
     font-size: 30px;
 }
+
 button {
     background-color: var(--brightYellow);
     border: none;
@@ -51,9 +59,16 @@ button {
     color: white;
     font-size: 20px;
 }
+
+/* CLASES */
+.atributte {
+    margin: auto 30px;
+    padding: 30px 0px;
+}
+
 .grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     max-width: 700px;
     border-radius: 10px;
     overflow: hidden;
@@ -64,38 +79,77 @@ button {
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
-    padding: 50px;
+    padding: 45px 40px;
+    gap: 10px;
 }
-.texto-descripcion {
-    padding-bottom: 15px;
-}
+
 .texto-descripcion p {
-    margin: 5px 0px;
+    margin-right: 50px;
+    line-height: 25px;
 }
+
 .servicios {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--cyan);
     padding: 40px;
 }
+
 .servicios p {
     color: white;
 }
+
 .subscripcion {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-right: 30px;
 }
+
 .oferta {
     padding: 25px 0px ;
+    margin-bottom: 15px;
 }
+
 .nosotros {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 30px;
 }
+
 .nosotros p {
     color: var(--lightGray);
+}
+
+/* DISEÑO ADAPTABLE*/
+@media (max-width:480px) {
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .texto {
+        padding: 35px 20px;
+    }
+    .texto-descripcion p {
+        margin: 0px;
+    }
+    .servicios {
+        display: flex;
+        flex-direction: column;
+        padding: 35px 20px;
+    }
+    .subscripcion {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .nosotros {
+        padding: 0px;
+        margin-top: 30px;
+    }
+    .descripcion {
+        padding-top: 20px;
+    }
 }
